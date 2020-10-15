@@ -1,0 +1,26 @@
+﻿Stratégie "une seule table par arborescence d'héritage"
+create table STYLO1 (
+   reference varchar2(100) constraint pk_1 primary key,
+   type_article varchar2(100), 
+   description varchar2(100),
+   pu number,
+   couleur varchar2(20),
+   grammage number
+)
+
+Stratégie "une table par classe concrète"
+create table stylo2 (
+   reference varchar2(100) constraint pk_2 primary key,
+   description varchar2(100),
+   pu  number,
+   couleur varchar2(100)
+)
+
+
+Stratégie "une table par classe"
+create table stylo3 (
+  reference varchar2(100) constraint pk_3 primary key references article,
+  couleur varchar2(100)
+  )
+
+
