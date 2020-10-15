@@ -27,7 +27,7 @@ create table stylo3 (
   reference varchar2(100)
   couleur varchar2(100),
   constraint pk_3 primary key (reference),
-  constraint fk3 foreign key (reference) references article(reference),
+  constraint fk_3 foreign key (reference) references article(reference)
   )
 
 
